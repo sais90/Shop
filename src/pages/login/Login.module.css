@@ -1,0 +1,36 @@
+.content {
+  display: flex;
+  flex-direction: column;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+
+.page-wrapper {
+  display: flex;
+  flex-direction: row;
+  position: relative;
+}
+
+.registration_link {
+  left: 0;
+  right: 0;
+  margin: auto;
+  text-decoration: none;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+
+input {
+  margin: 5px 0 5px 0;
+}
+
+.eye_icon {
+  cursor: pointer;
+}

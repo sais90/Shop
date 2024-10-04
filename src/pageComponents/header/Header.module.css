@@ -1,0 +1,10 @@
+.header_wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.link {
+  display: flex;
+  text-decoration: none;
+}

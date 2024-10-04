@@ -1,0 +1,12 @@
+.footer {
+  display: flex;
+  flex-direction: row;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+
+.fa_copyright {
+  color: gray;
+  /* font-size: small; */
+}

@@ -1,0 +1,10 @@
+.public-layout {
+  display: flex;
+  flex-direction: column;
+  left: 0;
+  right: 0;
+  margin: 0;
+  height: 100vh;
+  background-size: cover;
+  /* background-image: url(https://vsthemes.org/uploads/posts/2018-12/1582033316_black-abstract_vsthemes_ru-17.webp); */
+}
