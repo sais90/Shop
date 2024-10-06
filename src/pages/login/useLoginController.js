@@ -4,20 +4,22 @@ import { setIsAuth } from '../../utils/helpers/isAuthSlice';
 import { useDispatch } from 'react-redux';
 import axios from 'axios';
 import { useForm } from 'react-hook-form';
+import { useCallback } from 'react';
 
 export const useLoginController = () => {
     const dispatch = useDispatch();
     const navigate = useNavigate();
-    const [passwordShown, setPasswordShown] = useState(false);
+    // const [passwordShown, setPasswordShown] = useState(false);
     // const togglePasswordVisibility = () => {
     //   setPasswordShown(passwordShown ? false : true);
     // };
 
-    const togglePasswordShown = useCallback(() => {
-        setPasswordShown(s => !s);
-    }, [])
+    // const togglePasswordShown = useCallback(() => {
+    //     setPasswordShown(s => !s);
+    // }, [])
 
     // const { register, handleSubmit, watch, formState: { errors, isDirty, isValid }, } = useForm({ mode: 'onChange' });
+    const { watch } = useForm({ mode: 'onChange' });
     const loginForm = useForm({ mode: 'onChange' });
 
     // const email = watch('email');
@@ -43,8 +45,8 @@ export const useLoginController = () => {
 
     return {
         loginForm,
-        passwordShown,
-        togglePasswordShown,
+        // passwordShown,
+        // togglePasswordShown,
         loginUser
     }
 }

@@ -16,11 +16,11 @@ const AuthController = props => {
         dispatch(setIsAuth(false));
       }
     }
-  }, []);
+  }, [user, dispatch]);
 
   if (typeof user === 'boolean') {
     return children;
-  } s
+  }
 
   return null;
 };

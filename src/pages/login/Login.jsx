@@ -9,11 +9,11 @@ import { useDispatch } from 'react-redux';
 import axios from 'axios';
 import { useForm } from 'react-hook-form';
 import PublicLayout from '../../layouts/publicLayout/PublicLayout';
-import useLoginController from './useLoginController';
+import { useLoginController } from './useLoginController';
 import s from './Login.module.css';
 
 import { EyeVisibility } from '../../shared';
-
+import { useEyeVisibilityController } from '../../shared/components/EyeVisibility/useEyeVisibilityController';
 
 const Login = () => {
   const {
@@ -22,6 +22,12 @@ const Login = () => {
     // togglePasswordShown,
     loginUser
   } = useLoginController()
+
+  const {
+    passwordShown,
+    // togglePasswordShown
+  } = useEyeVisibilityController();
+
   const { register, handleSubmit, watch, formState: { errors, isDirty, isValid } } = loginForm
 
   return (
