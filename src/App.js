@@ -3,16 +3,26 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import AuthController from './utils/helpers/AuthController';
 import customRoutes from './routes/customRoutes';
 import navbarRoutes from './routes/navbarRoutes';
-import routesComponentsMaper from './utils/helpers/routesComponentsMaper';
+import routesComponentsMapper from './utils/helpers/routesComponentsMapper';
+import Error404 from './errors/Error404';
 
 const App = () => {
   let routesComponents = [];
 
-  const customRoutesComponents = routesComponentsMaper(customRoutes);
+  let creatErrorComponent = () => {
+    return (
+      <Route
+        path='*'
+        element={<Error404 />}
+      />
+    )
+  }
 
-  const navbarRoutesComponents = routesComponentsMaper(navbarRoutes);
+  const customRoutesComponents = routesComponentsMapper(customRoutes);
 
-  routesComponents = routesComponents.concat(customRoutesComponents, navbarRoutesComponents);
+  const navbarRoutesComponents = routesComponentsMapper(navbarRoutes);
+
+  routesComponents = routesComponents.concat(customRoutesComponents, navbarRoutesComponents, creatErrorComponent());
 
   // const customRoutesComponents = customRoutes.map((route, index) => {
   //   return (

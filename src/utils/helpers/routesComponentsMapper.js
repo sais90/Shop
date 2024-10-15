@@ -1,7 +1,7 @@
 import { Route } from 'react-router-dom';
 import RequireAuth from './RequireAuth';
 
-const routesComponentsMaper = props => {
+const routesComponentsMapper = props => {
   return props.map((route, index) => {
     return (
       <Route
@@ -13,4 +13,4 @@ const routesComponentsMaper = props => {
   });
 };
 
-export default routesComponentsMaper;
+export default routesComponentsMapper;

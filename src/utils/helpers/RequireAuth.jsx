@@ -5,6 +5,10 @@ import useAuth from '../../hooks/useAuth';
 const RequireAuth = props => {
   const user = useAuth();
 
+  // if (props.route.path = '*') {
+  //   return <Error404 />;
+  // }
+
   if (!user) {
     if (!props.route.isPrivate) {
       return props.children;
