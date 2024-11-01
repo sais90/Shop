@@ -3,32 +3,33 @@ import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
-import IconButton from '@mui/material/IconButton';
-import AccountCircle from '@mui/icons-material/AccountCircle';
-import MenuItem from '@mui/material/MenuItem';
-import Menu from '@mui/material/Menu';
+// import IconButton from '@mui/material/IconButton';
+// import AccountCircle from '@mui/icons-material/AccountCircle';
+// import MenuItem from '@mui/material/MenuItem';
+// import Menu from '@mui/material/Menu';
 import { ThemeProvider } from '@emotion/react';
 import theme from '../themes/myTheme';
 import { Link } from 'react-router-dom';
-import { setIsAuth } from '../utils/helpers/isAuthSlice';
-import { useDispatch } from 'react-redux';
+import UserMenu from './UserMenu';
+// import { setIsAuth } from '../utils/helpers/isAuthSlice';
+// import { useDispatch } from 'react-redux';
 
 const ButtonAppBarPrivate = () => {
-  const dispatch = useDispatch();
-  const [anchorEl, setAnchorEl] = React.useState(null);
+  // const dispatch = useDispatch();
+  // const [anchorEl, setAnchorEl] = React.useState(null);
 
-  const handleMenu = event => {
-    setAnchorEl(event.currentTarget);
-  };
+  // const handleMenu = event => {
+  //   setAnchorEl(event.currentTarget);
+  // };
 
-  const handleClose = () => {
-    setAnchorEl(null);
-  };
+  // const handleClose = () => {
+  //   setAnchorEl(null);
+  // };
 
-  const handleLogaut = () => {
-    localStorage.removeItem('access_token');
-    dispatch(setIsAuth(false));
-  };
+  // const handleLogaut = () => {
+  //   localStorage.removeItem('access_token');
+  //   dispatch(setIsAuth(false));
+  // };
   return (
     <ThemeProvider theme={theme}>
       <Box>
@@ -40,7 +41,9 @@ const ButtonAppBarPrivate = () => {
               </Typography>
             </Link>
 
-            <IconButton
+            <UserMenu />
+
+            {/* <IconButton
               size="large"
               aria-label="account of current user"
               aria-controls="menu-appbar"
@@ -78,7 +81,7 @@ const ButtonAppBarPrivate = () => {
                   <Typography component="div">Logout</Typography>
                 </Link>
               </MenuItem>
-            </Menu>
+            </Menu> */}
           </Toolbar>
         </AppBar>
       </Box>
