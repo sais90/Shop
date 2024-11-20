@@ -6,7 +6,7 @@ import Typography from '@mui/material/Typography';
 
 // import { Link } from 'react-router-dom';
 
-const ButtonAppBarPablic = () => {
+const ButtonAppBarPublic = () => {
   return (
     <Box>
       <AppBar position="static"
@@ -75,4 +75,4 @@ const ButtonAppBarPablic = () => {
   );
 };
 
-export default ButtonAppBarPablic;
+export default ButtonAppBarPublic;
