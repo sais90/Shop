@@ -14,7 +14,7 @@ import s from './Login.module.css';
 
 import { EyeVisibility } from '../../shared';
 import { useEyeVisibilityController } from '../../shared/components/EyeVisibility/useEyeVisibilityController';
-
+import ButtonAppBarPublic from '../../pageComponents/ButtonAppBarPublic';
 const Login = () => {
   const {
     loginForm,
@@ -31,7 +31,7 @@ const Login = () => {
   const { register, handleSubmit, watch, formState: { errors, isDirty, isValid } } = loginForm
 
   return (
-    <PublicLayout>
+    <PublicLayout buttonAppBar={<ButtonAppBarPublic />}>
       <label> Please, fill in the form for login </label>
 
       <form onSubmit={handleSubmit(loginUser)}>

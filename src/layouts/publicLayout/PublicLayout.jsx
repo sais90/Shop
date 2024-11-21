@@ -6,8 +6,8 @@ import ButtonAppBarPublic from '../../pageComponents/ButtonAppBarPublic';
 const PublicLayout = props => {
   return (
     <div className="public-layout">
-      {/* {props.buttonAppBar} */}
-      <ButtonAppBarPublic />
+      {props.buttonAppBar}
+      {/* <ButtonAppBarPublic /> */}
       {props.leftNaviation}
       <div className="content">{props.children}</div>
       <Footer />

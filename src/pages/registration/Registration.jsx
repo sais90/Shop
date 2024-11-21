@@ -18,6 +18,7 @@ import IconButton from '@mui/material/IconButton';
 import Visibility from '@mui/icons-material/Visibility';
 import VisibilityOff from '@mui/icons-material/VisibilityOff';
 import FilledInput from '@mui/material/FilledInput';
+import ButtonAppBarPublic from '../../pageComponents/ButtonAppBarPublic';
 
 const Registration = () => {
   const [passwordShown, setPasswordShown] = useState(false);
@@ -65,7 +66,7 @@ const Registration = () => {
   };
 
   return (
-    <PublicLayout>
+    <PublicLayout buttonAppBar={<ButtonAppBarPublic />}>
       <span> Please, fill in the form for registration </span>
 
       <Box
